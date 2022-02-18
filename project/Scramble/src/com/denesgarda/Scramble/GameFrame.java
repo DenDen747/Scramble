@@ -2,6 +2,7 @@ package com.denesgarda.Scramble;
 
 import com.denesgarda.Scramble.util.Popup;
 import com.denesgarda.Scramble.util.PropertiesUtil;
+import com.denesgarda.Scramble.util.Sounds;
 import com.denesgarda.Scramble.util.TextAreaOutputStream;
 
 import javax.swing.*;
@@ -77,6 +78,11 @@ public class GameFrame extends JFrame {
                     int time = Memory.timeLimit;
 
                     while (time > -1) {
+                        if (time == 10) {
+                            if (gameFrame.isVisible()) {
+                                Sounds.playSound("ticking.wav");
+                            }
+                        }
                         timer.setText(time + " seconds left");
                         Thread.sleep(1000);
                         time--;
@@ -85,6 +91,7 @@ public class GameFrame extends JFrame {
                     textField.setEditable(false);
 
                     if (gameFrame.isVisible()) {
+                        Sounds.playSound("results.wav");
                         int matching = 0;
                         for (String word : Memory.words) {
                             if (word.matches(Memory.Interoperational.regex + "+")) {
@@ -114,6 +121,7 @@ public class GameFrame extends JFrame {
                         }
                     }
                     if (input.matches(Memory.Interoperational.regex + "+") && !Memory.Interoperational.used.contains(input) && input.length() >= 3 && Memory.words.contains(input)) {
+                        Sounds.playSound("beep.wav");
                         Memory.Interoperational.used.add(input);
                         int points = 0;
                         if (input.length() == 3) {
