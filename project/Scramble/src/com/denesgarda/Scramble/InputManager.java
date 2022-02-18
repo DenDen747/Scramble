@@ -30,8 +30,6 @@ public class InputManager {
                 Manage.i4(input);
             } else if (Memory.INPUT_ID == 5) {
                 Manage.i5(input);
-            } else if (Memory.INPUT_ID == 6) {
-                Manage.i6(input);
             }
         }
     }
@@ -57,28 +55,9 @@ public class InputManager {
                 }
                 Memory.Interoperational.regex = Arrays.toString(selected.toArray()).replace(", ", "");
                 Memory.Interoperational.available = selected;
-                System.out.println(Strings.s6());
-                Memory.WINDOW.textField.setEditable(false);
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            System.out.println("5");
-                            Thread.sleep(1000);
-                            System.out.println("4");
-                            Thread.sleep(1000);
-                            System.out.println("3");
-                            Thread.sleep(1000);
-                            System.out.println("2");
-                            Thread.sleep(1000);
-                            System.out.println("1");
-                            Thread.sleep(1000);
-                            System.out.println("GO!!!");
-                            Memory.WINDOW.textField.setEditable(true);
-                        } catch (Exception ignored) {}
-                    }
-                }).start();
-                Memory.Operation.setInputID(6);
+                new GameFrame();
+                System.out.println(Strings.s0);
+                Memory.Operation.setInputID(0);
             } else if (input.equalsIgnoreCase("2")) {
                 Memory.WINDOW.clear();
                 System.out.println(Strings.s1);
@@ -170,13 +149,6 @@ public class InputManager {
                 } catch (Exception ignored) {}
             }
         }
-
-        public static void i6(String input) {
-            if (input.matches(Memory.Interoperational.regex + "+") && !Memory.Interoperational.used.contains(input)) {
-                Memory.Interoperational.used.add(input);
-                System.out.println("+1");
-            }
-        }
     }
 
     public static class Strings {
@@ -186,6 +158,5 @@ public class InputManager {
         public static String s3() { return "Enter a new value\n\nFont size (Default: 14 | min: 8 | max: 50):\n" + PropertiesUtil.getPropertyNotNull(Memory.CONFIG, "font-size", "14") + " -> __\n\n[`] Back"; }
         public static String s4() { return "Enter a new value\n\nWord length (Default: 8 | min: 4 | max: 12):\n" + Memory.wordLength + " -> __\n\n[`] Back"; }
         public static String s5() { return "Enter a new value\n\nTime limit (Default: 30 | min: 5 | max: 300):\n" + Memory.timeLimit + " -> __ (seconds)\n\n[`] Back"; }
-        public static String s6() { return "Available Letters: " + Arrays.toString(Memory.Interoperational.available.toArray()); }
     }
 }

@@ -18,10 +18,13 @@ public class Memory {
     public static int wordLength = 8;
     public static int timeLimit = 30;
 
+    public static ArrayList<String> words = new ArrayList<>();
+
     public static class Interoperational {
         public static String regex;
         public static ArrayList<Character> available;
         public static ArrayList<String> used = new ArrayList<>();
+        public static int score = 0;
     }
 
     public static class Operation {

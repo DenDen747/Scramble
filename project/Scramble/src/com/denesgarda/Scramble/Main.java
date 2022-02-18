@@ -7,6 +7,8 @@ import com.denesgarda.Scramble.util.PropertiesUtil;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +38,19 @@ public class Main {
         System.out.println("Applying config...");
         Memory.WINDOW.textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, Integer.parseInt(PropertiesUtil.getPropertyNotNull(Memory.CONFIG, "font-size", "14"))));
         System.out.println("Successfully applied config.");
+
+        System.out.println("Loading words...");
+        InputStream is = Main.class.getResourceAsStream("data/words.txt");
+        Scanner scanner2 = new Scanner(is);
+        scanner2.useDelimiter("\\Z");
+        while (scanner2.hasNext()) {
+            String word = scanner2.nextLine();
+            if (word.matches("[a-zA-Z]+")) {
+                Memory.words.add(word.toLowerCase());
+            }
+        }
+        scanner2.close();
+        System.out.println("Words successfully loaded.");
 
         Memory.WINDOW.clear();
         Memory.WINDOW.textField.setEditable(true);
