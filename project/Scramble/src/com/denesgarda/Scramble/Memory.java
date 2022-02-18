@@ -2,9 +2,8 @@ package com.denesgarda.Scramble;
 
 import com.denesgarda.Prop4j.data.PropertiesFile;
 import com.denesgarda.Scramble.util.Popup;
-import com.denesgarda.Scramble.util.PropertiesUtil;
 
-import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class Memory {
@@ -16,11 +15,13 @@ public class Memory {
     public static Window WINDOW;
     public static PropertiesFile CONFIG;
 
-    public static int wordLength = 5;
+    public static int wordLength = 8;
     public static int timeLimit = 30;
 
     public static class Interoperational {
-
+        public static String regex;
+        public static ArrayList<Character> available;
+        public static ArrayList<String> used = new ArrayList<>();
     }
 
     public static class Operation {
