@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.PrintStream;
+import java.util.Arrays;
 
 public class GameFrame extends JFrame {
     public JPanel panel;
@@ -54,6 +55,7 @@ public class GameFrame extends JFrame {
         scoreCounter.setText("Score: " + Memory.Interoperational.score);
         informationOut.println("Available letters:\n" + Memory.Interoperational.available);
 
+        GameFrame gameFrame = this;
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -81,6 +83,18 @@ public class GameFrame extends JFrame {
                     }
 
                     textField.setEditable(false);
+
+                    if (gameFrame.isVisible()) {
+                        int matching = 0;
+                        for (String word : Memory.words) {
+                            if (word.matches(Memory.Interoperational.regex + "+")) {
+                                matching++;
+                            }
+                        }
+
+                        Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching);
+                        gameFrame.setVisible(false);
+                    }
                 } catch (Exception ignored) {}
             }
         }).start();
@@ -91,6 +105,14 @@ public class GameFrame extends JFrame {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     String input = textField.getText().toLowerCase();
                     textField.setText("");
+                    if (input.equalsIgnoreCase("~")) {
+                        int confirmation = Popup.yesNoConfirm("Exit", "Are you sure you want to exit?");
+                        if (confirmation == 0) {
+                            Memory.WINDOW.clear();
+                            System.out.println("Thank you for playing.");
+                            System.exit(0);
+                        }
+                    }
                     if (input.matches(Memory.Interoperational.regex + "+") && !Memory.Interoperational.used.contains(input) && input.length() >= 3 && Memory.words.contains(input)) {
                         Memory.Interoperational.used.add(input);
                         int points = 0;

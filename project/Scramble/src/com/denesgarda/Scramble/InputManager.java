@@ -122,7 +122,7 @@ public class InputManager {
             } else {
                 try {
                     int length = Integer.parseInt(input);
-                    if (length >= 3 && length <= 10) {
+                    if (length >= 3 && length <= 12) {
                         Memory.wordLength = length;
                         Memory.WINDOW.clear();
                         System.out.println(Strings.s2());

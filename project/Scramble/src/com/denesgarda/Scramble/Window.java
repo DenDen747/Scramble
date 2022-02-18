@@ -53,11 +53,15 @@ public class Window extends JFrame {
                 if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                     textField.setText(textField.getText().substring(0, textField.getText().length() - 1));
                     textField.requestFocus();
-                    textField.setCaretPosition(textField.getText().length() - 1);
+                    try {
+                        textField.setCaretPosition(textField.getText().length() - 1);
+                    } catch (Exception ignored) {}
                 } else if (e.getKeyChar() != '\uFFFF') {
                     textField.setText(textField.getText() + e.getKeyChar());
                     textField.requestFocus();
-                    textField.setCaretPosition(textField.getText().length() - 1);
+                    try {
+                        textField.setCaretPosition(textField.getText().length() - 1);
+                    } catch (Exception ignored) {}
                 }
             }
         });
