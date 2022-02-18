@@ -41,17 +41,32 @@ public class InputManager {
                 char[] consonants = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
                 char[] vowels = {'a', 'e', 'i', 'o', 'u'};
                 ArrayList<Character> selected = new ArrayList<>();
-                for (int i = 0; i < Memory.wordLength; i++) {
-                    char chosen;
-                    do {
-                        int cv = new Random().nextInt(5);
-                        if (cv == 0 || cv == 1 || cv == 2) {
-                            chosen = consonants[new Random().nextInt(consonants.length)];
-                        } else {
-                            chosen = vowels[new Random().nextInt(vowels.length)];
+                while (true) {
+                    for (int i = 0; i < Memory.wordLength; i++) {
+                        char chosen;
+                        do {
+                            int cv = new Random().nextInt(5);
+                            if (cv == 0 || cv == 1 || cv == 2) {
+                                chosen = consonants[new Random().nextInt(consonants.length)];
+                            } else {
+                                chosen = vowels[new Random().nextInt(vowels.length)];
+                            }
+                        } while (selected.contains(chosen));
+                        selected.add(chosen);
+                    }
+                    if (Memory.wordLength == 6) {
+                        break;
+                    }
+                    int matching = 0;
+                    for (String word : Memory.words) {
+                        if (word.matches(Arrays.toString(selected.toArray()).replace(", ", "") + "+")) {
+                            matching++;
                         }
-                    } while (selected.contains(chosen));
-                    selected.add(chosen);
+                    }
+                    if (matching >= 150) {
+                        break;
+                    }
+                    selected.clear();
                 }
                 Memory.Interoperational.regex = Arrays.toString(selected.toArray()).replace(", ", "");
                 Memory.Interoperational.available = selected;
@@ -122,7 +137,7 @@ public class InputManager {
             } else {
                 try {
                     int length = Integer.parseInt(input);
-                    if (length >= 3 && length <= 12) {
+                    if (length >= 6 && length <= 15) {
                         Memory.wordLength = length;
                         Memory.WINDOW.clear();
                         System.out.println(Strings.s2());
@@ -156,7 +171,7 @@ public class InputManager {
         public static String s1 = "How to play\n\nYou are given a combination of a set amount of random letters. You have to try to make as many actual words with the letters as possible in a set amount of time.\n\n[ENTER] Back";
         public static String s2() { return "Options\n\n---General---\n[1] Font size: " + PropertiesUtil.getPropertyNotNull(Memory.CONFIG, "font-size", "14") + "\n---Gameplay---\n[2] Word length: " + Memory.wordLength + "\n[3] Time limit (seconds): " + Memory.timeLimit + "\n\n[`] Back"; }
         public static String s3() { return "Enter a new value\n\nFont size (Default: 14 | min: 8 | max: 50):\n" + PropertiesUtil.getPropertyNotNull(Memory.CONFIG, "font-size", "14") + " -> __\n\n[`] Back"; }
-        public static String s4() { return "Enter a new value\n\nWord length (Default: 8 | min: 4 | max: 12):\n" + Memory.wordLength + " -> __\n\n[`] Back"; }
+        public static String s4() { return "Enter a new value\n\nWord length (Default: 10 | min: 6 | max: 15):\n" + Memory.wordLength + " -> __\n\n[`] Back"; }
         public static String s5() { return "Enter a new value\n\nTime limit (Default: 30 | min: 5 | max: 300):\n" + Memory.timeLimit + " -> __ (seconds)\n\n[`] Back"; }
     }
 }

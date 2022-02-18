@@ -15,7 +15,7 @@ public class Memory {
     public static Window WINDOW;
     public static PropertiesFile CONFIG;
 
-    public static int wordLength = 8;
+    public static int wordLength = 10;
     public static int timeLimit = 30;
 
     public static ArrayList<String> words = new ArrayList<>();
