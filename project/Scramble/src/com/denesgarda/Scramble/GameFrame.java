@@ -106,13 +106,21 @@ public class GameFrame extends JFrame {
 
                         String hs = PropertiesUtil.getPropertyNotNull(Memory.HIGH_SCORES, Memory.wordLength + "|" + Memory.timeLimit, "0");
 
-                        Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nPrevious high score for selected mode: " + hs + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching);
+                        String rhs = PropertiesUtil.getPropertyNotNull(Memory.HIGH_SCORES, "rating", "0");
+
+                        double rating = (Math.pow(Memory.Interoperational.score, 1.75) * Math.pow((double) Memory.Interoperational.used.size() / matching, 0.35)) / (Memory.timeLimit * Math.pow(Memory.Interoperational.available.size(), 0.85));
+
+                        Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nPrevious high score for selected mode: " + hs + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching + "\n\nRating: " + rating + "\n\nPrevious best rating: " + rhs);
+
+                        gameFrame.setVisible(false);
 
                         if (Memory.Interoperational.score > Integer.parseInt(hs)) {
                             Memory.HIGH_SCORES.setProperty(Memory.wordLength + "|" + Memory.timeLimit, String.valueOf(Memory.Interoperational.score));
                         }
 
-                        gameFrame.setVisible(false);
+                        if (rating > Integer.parseInt(rhs)) {
+                            Memory.HIGH_SCORES.setProperty("rating", String.valueOf(rating));
+                        }
                     }
                 } catch (Exception ignored) {}
             }
