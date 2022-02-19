@@ -80,13 +80,16 @@ public class GameFrame extends JFrame {
                     int time = Memory.timeLimit;
 
                     while (time > -1) {
-                        if (time == 10) {
-                            if (gameFrame.isVisible()) {
-                                Sounds.playSound("ticking.wav");
-                            }
-                        }
                         timer.setText(time + " seconds left");
-                        Thread.sleep(1000);
+                        if (time == 9) {
+                            if (gameFrame.isVisible()) {
+                                Thread.sleep(100);
+                                Sounds.playSound("ticking.wav");
+                                Thread.sleep(900);
+                            }
+                        } else {
+                            Thread.sleep(1000);
+                        }
                         time--;
                     }
 
