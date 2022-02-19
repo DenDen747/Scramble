@@ -35,6 +35,25 @@ public class Main {
         Memory.CONFIG = new PropertiesFile("scramble.properties");
         System.out.println("Successfully loaded config.");
 
+        File highScores = new File("highScores.properties");
+        if (!highScores.exists()) {
+            System.out.println("High scores file not found. Generating new one...");
+            try {
+                boolean successful = highScores.createNewFile();
+                if (!successful) {
+                    System.out.println("Failed to generate high scores file.");
+                    Popup.error("Config Error", "Failed to generate high scores file.");
+                    System.exit(-1);
+                }
+            } catch (IOException e) {
+                System.out.println("Failed to generate high scores file.");
+                Popup.error("Config Error", "Failed to generate high scores file.");
+                System.exit(-1);
+            }
+        }
+        Memory.HIGH_SCORES = new PropertiesFile("highScores.properties");
+        System.out.println("Successfully loaded high scores.");
+
         System.out.println("Applying config...");
         Memory.WINDOW.textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, Integer.parseInt(PropertiesUtil.getPropertyNotNull(Memory.CONFIG, "font-size", "14"))));
         System.out.println("Successfully applied config.");

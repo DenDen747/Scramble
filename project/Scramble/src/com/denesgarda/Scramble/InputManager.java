@@ -59,7 +59,7 @@ public class InputManager {
                     }
                     int matching = 0;
                     for (String word : Memory.words) {
-                        if (word.matches(Arrays.toString(selected.toArray()).replace(", ", "") + "+")) {
+                        if (word.matches(Arrays.toString(selected.toArray()).replace(", ", "") + "+") && word.length() >= 3) {
                             matching++;
                         }
                     }

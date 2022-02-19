@@ -75,6 +75,8 @@ public class GameFrame extends JFrame {
                     Thread.sleep(1000);
                     textField.setEditable(true);
 
+                    Sounds.playSound("start.wav");
+
                     int time = Memory.timeLimit;
 
                     while (time > -1) {
@@ -94,12 +96,19 @@ public class GameFrame extends JFrame {
                         Sounds.playSound("results.wav");
                         int matching = 0;
                         for (String word : Memory.words) {
-                            if (word.matches(Memory.Interoperational.regex + "+")) {
+                            if (word.matches(Memory.Interoperational.regex + "+") && word.length() >= 3) {
                                 matching++;
                             }
                         }
 
-                        Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching);
+                        String hs = PropertiesUtil.getPropertyNotNull(Memory.HIGH_SCORES, Memory.wordLength + "|" + Memory.timeLimit, "0");
+
+                        Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nPrevious high score for selected mode: " + hs + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching);
+
+                        if (Memory.Interoperational.score > Integer.parseInt(hs)) {
+                            Memory.HIGH_SCORES.setProperty(Memory.wordLength + "|" + Memory.timeLimit, String.valueOf(Memory.Interoperational.score));
+                        }
+
                         gameFrame.setVisible(false);
                     }
                 } catch (Exception ignored) {}

@@ -14,6 +14,7 @@ public class Memory {
     public static int INPUT_ID;
     public static Window WINDOW;
     public static PropertiesFile CONFIG;
+    public static PropertiesFile HIGH_SCORES;
 
     public static int wordLength = 10;
     public static int timeLimit = 30;
