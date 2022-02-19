@@ -1,9 +1,7 @@
 package com.denesgarda.Scramble;
 
+import com.denesgarda.Scramble.util.*;
 import com.denesgarda.Scramble.util.Popup;
-import com.denesgarda.Scramble.util.PropertiesUtil;
-import com.denesgarda.Scramble.util.Sounds;
-import com.denesgarda.Scramble.util.TextAreaOutputStream;
 
 import javax.swing.*;
 import javax.swing.text.DefaultCaret;
@@ -108,7 +106,7 @@ public class GameFrame extends JFrame {
 
                         String rhs = PropertiesUtil.getPropertyNotNull(Memory.HIGH_SCORES, "rating", "0");
 
-                        double rating = (Math.pow(Memory.Interoperational.score, 1.75) * Math.pow((double) Memory.Interoperational.used.size() / matching, 0.35)) / (Memory.timeLimit * Math.pow(Memory.Interoperational.available.size(), 0.85));
+                        double rating = MathUtil.round((Math.pow(Memory.Interoperational.score, 1.75) * Math.pow((double) Memory.Interoperational.used.size() / matching, 0.35)) / (Memory.timeLimit * Math.pow(Memory.Interoperational.available.size(), 0.85)), 2);
 
                         Popup.information("Results", "Final score: " + Memory.Interoperational.score + "\n\nPrevious high score for selected mode: " + hs + "\n\nTime limit: " + Memory.timeLimit + "\n\nAvailable Letters:\n" + Arrays.toString(Memory.Interoperational.available.toArray()) + "\n\n" + Memory.Interoperational.used.size() + " words guessed out of " + matching + "\n\nRating: " + rating + "\n\nPrevious best rating: " + rhs);
 
@@ -118,7 +116,7 @@ public class GameFrame extends JFrame {
                             Memory.HIGH_SCORES.setProperty(Memory.wordLength + "|" + Memory.timeLimit, String.valueOf(Memory.Interoperational.score));
                         }
 
-                        if (rating > Integer.parseInt(rhs)) {
+                        if (rating > Double.parseDouble(rhs)) {
                             Memory.HIGH_SCORES.setProperty("rating", String.valueOf(rating));
                         }
                     }
