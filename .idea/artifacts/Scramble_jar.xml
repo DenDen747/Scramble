@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="Scramble:jar">
-    <output-path>$USER_HOME$/Downloads/Scramble.jar</output-path>
-    <root id="archive" name="Scramble.jar">
-      <element id="module-output" name="Scramble" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/dependencies/Prop4j_1.3.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>

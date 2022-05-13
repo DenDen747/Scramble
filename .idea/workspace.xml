@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f153fb75-7fe2-4882-af5e-983200278148" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Scramble_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scramble.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/GameFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/GameFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/GameFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/InputManager$Manage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/InputManager$Strings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/InputManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Memory$Interoperational.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Memory$Operation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Memory$SolidState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Memory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Window$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Window$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Window$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/sounds/beep.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/sounds/correct.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/sounds/results.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/sounds/start.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/sounds/ticking.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/data/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/inputIDs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/MathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/Popup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/PropertiesUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/Sounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/TextAreaOutputStream$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/denesgarda/Scramble/util/TextAreaOutputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scramble/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/GameFrame.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/GameFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/InputManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Memory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Window.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Window.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/beep.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/correct.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/flip.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/results.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/start.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/sounds/ticking.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/data/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/inputIDs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/MathUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/Popup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/PropertiesUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/Sounds.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/TextAreaOutputStream.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="295nJswXvdLUXdXFrvBk73DPjoJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f153fb75-7fe2-4882-af5e-983200278148" name="Changes" comment="" />
+      <created>1652411746609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652411746609</updated>
+    </task>
+    <servers />
+  </component>
+</project>
