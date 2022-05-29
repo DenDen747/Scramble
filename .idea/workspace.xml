@@ -5,43 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d784f69-7124-47d0-b9e3-3b8012498f03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/question.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/reset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/stats.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/image/win.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/Window.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Details.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Details.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Login.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Menu.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/cred/panels/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/etc/Loading.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/etc/Loading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/Window.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Account.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Menu.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Practice.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Practice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/PracticeSettings.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/PracticeSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/memory/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/ImageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/OS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/Popup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/util/Sounds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scramble.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Scramble.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/denesgarda/Scramble/gui/main/panels/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

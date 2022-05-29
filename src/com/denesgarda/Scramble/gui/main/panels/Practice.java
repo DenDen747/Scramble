@@ -140,7 +140,13 @@ public class Practice {
                     String[] resultsResponse = Main.client.autoQuery("9|" + Main.config.username + "|" + Main.config.password + "|" + res[1] + "|" + s[0] + "|" + used + "|" + time, false, false);
                     System.out.println(Arrays.toString(resultsResponse));
                     Main.inGame = false;
-                    Popup.info("Game Results", "Game ID: " + res[1] + "\nPoints: " + s[0] + "\n" + used.size() + " words guessed out of " + resultsResponse[1] + "\nTime: " + time + "\nAvailable characters: " + res[2] + "\nScore: " + resultsResponse[2]);
+                    String c;
+                    if (Double.parseDouble(resultsResponse[5]) >= 0) {
+                        c = "+" + resultsResponse[5];
+                    } else {
+                        c = resultsResponse[5];
+                    }
+                    Popup.info("Game Results", "Game ID: " + res[1] + "\nPoints: " + s[0] + "\n" + used.size() + " words guessed out of " + resultsResponse[1] + "\nTime: " + time + "\nAvailable characters: " + res[2] + "\nScore: " + resultsResponse[2] + "\n\nRating: " + resultsResponse[3] + " -> " + resultsResponse[4] + "\nChange in rating: " + c);
                     parent.setContentPane(new Menu(parent).panel);
                     parent.revalidate();
                 } catch (Exception ignored) {}
